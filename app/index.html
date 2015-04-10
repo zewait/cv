@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-timeline/dist/angular-timeline.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/foundation-glyphicons.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="cvApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" aria-label="Settings" ng-click="toggleLeftNav()">
+            <md-icon md-svg-icon="images/icons/menu.svg"></md-icon>
+          </md-button>
+          <h2>
+            <span>简历</span>
+          </h2>
+          <span flex></span>
+          <md-button class="md-icon-button" aria-label="More" ng-click="showFollowBottomSheet($event)">
+            <md-icon md-svg-icon="images/icons/more_vert.svg">
+          </md-icon></md-button>
+        </div>
+      </md-toolbar>
+      <md-content ng-view styles="height: 100%;">
+      </md-content>
+      <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+        <md-toolbar class="md-theme-indigo">
+          <h1 class="md-toolbar-tools"></h1>
+        </md-toolbar>
+        <md-content>
+          <md-list>
+            <md-list-item class="md-1-line">
+              <img ng-src="{{figure.avatar}}" class="md-avatar face" alt="{{figure.name}}"/>
+              <div class="md-list-item-text">
+                <h3>{{figure.name}}</h3>
+              </div>
+            </md-list-item>
+            <md-list-item ng-repeat="m in menus">
+              <md-button ng-click="leftNavMenuClick($index)" class="md-primary md-hue-1 fill leftNavMenuBtn">{{m.name}}</md-button>
+            </md-list-item>
+          </md-list>
+        </md-content>
+      </md-sidenav>
+    </div>
+
+
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-timeline/dist/angular-timeline.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/device.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/show_follow_bottom_sheet.js"></script>
+        <script src="scripts/controllers/info.js"></script>
+        <script src="scripts/controllers/skill.js"></script>
+        <script src="scripts/controllers/link.js"></script>
+        <script src="scripts/controllers/time_line.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

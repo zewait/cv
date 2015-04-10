@@ -1,0 +1,81 @@
+/* Space out content a bit */
+html {
+  font-family: arial,sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.bottomSheet .md-grid-item-content md-icon {
+  height: 48px;
+  width: 48px; 
+}
+.bottomSheet .md-grid-text {
+  padding-bottom: 5px; 
+}
+
+.face {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+md-list-item.md-1-line {
+    /* see http://css-tricks.com/using-flexbox/ */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-direction: column;
+    -moz-box-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    /* align start, disable vertical height */
+    -webkit-box-align: center;
+    -moz-box-align: center; /* FF <=20 */
+    -ms-flex-align: center; /* IE10 */
+    -webkit-align-items: center;
+    align-items: center;
+
+    -webkit-box-content: around;
+    -moz-box-content: around;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+md-list-item.md-1-line {
+    text-align: left;
+}
+.fill {
+    width: 100%;
+}
+
+.leftNavMenuBtn {
+    padding: 8px;
+}
+md-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-direction: column;
+    -moz-box-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    margin: 8px;
+}
+
+.timeline-img {
+    width: 100%;
+}

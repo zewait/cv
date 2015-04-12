@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# 2015年 4月12日 星期日 23时15分26秒 CST
+/index.html
+/script/*
+/styles/*
+/views/*
+/images/icons/*
+
+NETWORK:
+
+FALLBACK:
+/ /404.html
